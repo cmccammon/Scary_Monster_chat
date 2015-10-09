@@ -25,7 +25,10 @@
 
 
 <%= yield %>
-<p>logged in user:<%= @current_user.inspect %><br>
+<footer>
+<%= "logged in user: #{current_user.username}" if current_user %> 
+</footer>
+
 
 </body>
 </html>
