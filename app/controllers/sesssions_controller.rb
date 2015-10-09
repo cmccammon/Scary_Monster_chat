@@ -1,6 +1,6 @@
 class SesssionsController < ApplicationController
   skip_before_filter :authenticate_user
-  
+
   def new #login page
   end
 
@@ -12,6 +12,7 @@ class SesssionsController < ApplicationController
     else
       flash[:alert] = "Username or password did not match."
       render :new
+    end
   end
 
   def destroy #logout
@@ -22,7 +23,7 @@ class SesssionsController < ApplicationController
   private
 
   def set_user_session(user)
-  session[:logged_in_user_id] = user.id
+    session[:logged_in_user_id] = user.id
   end
 
 end

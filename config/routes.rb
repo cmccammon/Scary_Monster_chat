@@ -8,7 +8,6 @@ Rails.application.routes.draw do
  get '/about',      to: 'chats#about',       as: 'about'
  delete '/logout',  to: 'sesssions#destroy', as: 'logout'
 
-
- root chats_path
+ root 'chats#index'
 
 end
