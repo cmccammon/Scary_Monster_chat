@@ -1,5 +1,5 @@
 class ChatsController < ApplicationController
-  before_action :set_chat, only: [:show, :edit, :update, :destroy]
+  # before_action :set_chat, only: [:show, :edit, :update, :destroy]
 
   # GET /chats
   # GET /chats.json
