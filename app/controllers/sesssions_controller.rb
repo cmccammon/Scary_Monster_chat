@@ -1,16 +1,28 @@
 class SesssionsController < ApplicationController
-  def index
+  skip_before_filter :authenticate_user
+  
+  def new #login page
   end
 
-  def show
+  def create #a session
+    user = User.find_by_username(params[:username])
+    if user.present? && user.authenticate(params[:password])
+      set_user_session(user)
+      redirect_to chats_path, notice: "Log in successful."
+    else
+      flash[:alert] = "Username or password did not match."
+      render :new
   end
 
-  def new
+  def destroy #logout
+    session[:logged_in_user_id] = nil
+    redirect_to root_path, notice: "You have logged out."
   end
 
-  def create
+  private
+
+  def set_user_session(user)
+  session[:logged_in_user_id] = user.id
   end
 
-  def destroy
-  end
 end

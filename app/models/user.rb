@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
   has_many :chats, dependent: :destroy
-  validates :name, presence: true
+  validates :username, presence: true
 end
