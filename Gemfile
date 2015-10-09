@@ -47,6 +47,7 @@ end
 
 
 gem 'faker'
+gem 'react-rails'
 gem 'kaminari'
 gem 'bcrypt'
 group :production do
