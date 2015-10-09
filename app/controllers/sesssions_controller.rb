@@ -4,6 +4,9 @@ class SesssionsController < ApplicationController
   def new #login page
   end
 
+  def about
+  end
+
   def create #a session
     user = User.find_by_username(params[:username])
     if user.present? && user.authenticate(params[:password])

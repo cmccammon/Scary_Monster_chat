@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
  get '/login',      to: 'sesssions#new',     as: 'login'
  post '/login',      to: 'sesssions#create', as: 'create_session'
- get '/about',      to: 'chats#about',       as: 'about'
+ get '/about',      to: 'sesssions#about',       as: 'about'
  delete '/logout',  to: 'sesssions#destroy', as: 'logout'
 
  root 'chats#index'
