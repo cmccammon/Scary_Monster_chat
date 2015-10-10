@@ -7,35 +7,27 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <div class="container">
-      <%= react_component ("Navigation") %>
-    </div>
-        <!-- <nav>
-          <div class="nav-wrapper">
-            <a href="#" class="brand-logo right">Logo</a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-              <li><a href='/about'>About</a></li>
-              <li><a href='/home'>Home</a></li>
-              <li><a href='/login'>Login</a></li>
-              <li><a href='/logout'>Logout</a></li>
-              <li><a href='/chats'>Chats</a></li>
-            </ul>
-          </div>
-        </nav> -->
-    <div class="container">
+  <div class="container" style="border:1px solid black">
+    <body>
+      <div>
+        <%= react_component ("Navigation") %>
+      </div>
       <p id="notice"><%= notice %></p> <!--this should be green-->
       <p id="alert"><%= alert %></p> <!--this should be red-->
 
-
-      <%= yield %>
-
-    </div>
-  </body>
-
+      <div class='container'>
+        <div class='row'>
+          <div class='m12'>
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      
+    </body>
+  </div>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <footer>
     <%= "User logged in: #{current_user.username}" if current_user %>
   </footer>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </html>
