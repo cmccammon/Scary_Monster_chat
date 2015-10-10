@@ -13,8 +13,8 @@ class SesssionsController < ApplicationController
       set_user_session(user)
       redirect_to chats_path, notice: "Log in successful."
     else
-      flash[:alert] = "Username or password did not match."
       render :new
+      flash[:alert] = "Username or password did not match."
     end
   end
 

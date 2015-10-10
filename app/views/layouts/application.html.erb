@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,19 +18,18 @@
         <li><a href='/login'>Login</a></li>
         <li><a href='/logout'>Logout</a></li>
         <li><a href='/chats'>Chats</a></li>
-
-
       </ul>
     </div>
   </nav>
+  <p id="notice"><%= notice %></p> <!--this should be green-->
+  <p id="alert"><%= alert %></p> <!--this should be red-->
 
 
-
-<%= yield %>
-<footer>
-<%= "logged in user: #{current_user.username}" if current_user %>
-</footer>
+  <%= yield %>
 
 
 </body>
+<footer>
+  <%= "User logged in: #{current_user.username}" if current_user %>
+</footer>
 </html>
