@@ -45,10 +45,9 @@ group :development do
   gem 'spring'
 end
 
-
+gem 'momentjs-rails'
 gem 'faker'
 gem 'react-rails'
-gem 'kaminari'
 gem 'bcrypt'
 group :production do
   gem 'puma'

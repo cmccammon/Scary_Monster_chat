@@ -4,7 +4,8 @@ class ChatsController < ApplicationController
   # GET /chats
   # GET /chats.json
   def index
-    @chats = Chat.all
+    @chats = Chat.last(5)
+    @chat = Chat.new
   end
 
   # GET /chats/1

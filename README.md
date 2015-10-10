@@ -9,7 +9,11 @@
 Michelle Dotzerod
 Chris McCammon
 
-* How to run the test suite
+##Gems used
+Moment -js rails for time fomat styling
+Faker for seed creation
+Materialize-sass for styling
+bcrypt for password security
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##Notes for Team
+1. navbar fixed on application.html is not allowing container to change width properly
