@@ -4,17 +4,12 @@
 <html>
   <head>
     <title>ChatApp</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <div class="container" style="border:1px solid black">
     <body>
-      <div>
         <%= react_component ("Navigation") %>
-      </div>
-      <p id="notice"><%= notice %></p> <!--this should be green-->
-      <p id="alert"><%= alert %></p> <!--this should be red-->
-
       <div class='container'>
         <div class='row'>
           <div class='m12'>
@@ -22,7 +17,6 @@
           </div>
         </div>
       </div>
-      
     </body>
   </div>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

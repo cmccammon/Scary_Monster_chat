@@ -19,3 +19,22 @@
 //= require components
 //= require_tree .
 //= require moment
+
+//create new message via ajax
+
+$('#newMessage').on('click', function () {
+$.ajax({
+  url: '/chats',
+  method: 'POST',
+  dataType: 'JSON',
+  data: {
+    chat: {
+      messages: $('#chat_message').val(),
+    }
+  },
+  success: function (response) {
+    $('#chat_message').val('');
+    $('.field').prepend('<p>Message posted!</p>');
+  }
+ });
+});

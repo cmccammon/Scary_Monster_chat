@@ -1,7 +1,7 @@
 
 <h5>Leave a message in our chatroom</h5>
-<div class="container" style="border:1px solid black">
-  <table>
+<div class="chat-window" style="border:1px solid black">
+  <table class='centered'>
     <thead>
       <tr>
         <th>Messages</th>
@@ -11,7 +11,7 @@
       </tr>
     </thead>
 
-    <tbody>
+    <tbody class="chat-reload">
       <% @chats.each do |chat| %>
         <tr>
           <td><%= chat.messages %></td>
@@ -23,9 +23,6 @@
   </table>
 </div>
 
-<br>
 <div class="container">
-  <!-- <%# react_component ("NewChatMessage") %> -->
-
   <%= render 'form' %>
 </div>

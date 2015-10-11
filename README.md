@@ -17,3 +17,6 @@ bcrypt for password security
 
 ##Notes for Team
 1. navbar fixed on application.html is not allowing container to change width properly
+
+##Icons not working:
+<i class="material-icons right">send</i>
