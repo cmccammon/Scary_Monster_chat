@@ -9,7 +9,7 @@
 - Chris McCammon
 
 ##Gems used
-- Moment -js rails for time fomat styling
+- Moment -js rails for time format styling
 - Faker for seed creation
 - Materialize-sass for design elements
 - bcrypt for password security
@@ -26,3 +26,5 @@ This is a member's only application to leave messages for other users.
 1. navbar fixed on application.html is not allowing container to change width properly
 2. Icons not working:
 "<i class="material-icons right">send</i>"
+3. require minimum chars in message before submit
+4. react component NewchatMessage.js not functional  - replace ajax post in application.js

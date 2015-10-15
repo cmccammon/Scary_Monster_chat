@@ -9,7 +9,7 @@
   </head>
   <div class="container" style="border:1px solid black">
     <body>
-        <%= react_component ("Navigation") %>
+      <%= react_component("Navigation") %>
       <div class='container'>
         <div class='row'>
           <div class='m12'>
@@ -19,9 +19,10 @@
       </div>
     </body>
   </div>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <footer>
     <%= "User logged in: #{current_user.username}" if current_user %>
   </footer>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
 </html>
