@@ -15,7 +15,7 @@
 - bcrypt for password security
 
 ##Instructions
-To load the app, navigate to `https://scarymonsterchat.herokuapp.com/`. All users must be logged in to leave messages but other can view the About, Login and Home pages without creating an account.
+To load the app, navigate to [ScaryMonsterChat](https://scarymonsterchat.herokuapp.com/). All users must be logged in to leave messages but other can view the About, Login and Home pages without creating an account.
 
 
 ##Description
